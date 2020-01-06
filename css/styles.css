@@ -6,8 +6,7 @@ body{
 
 .container{
   display: grid;
-  grid-template-columns: 100px 1fr;
-  /* grid-template-rows: 1fr ; */
+  grid-template-columns: 80px 1fr;
   grid-template-areas: "header header"
                        "navbar content";
 }
@@ -22,6 +21,9 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
 }
 
 .logo{
@@ -75,7 +77,7 @@ body{
   grid-area: navbar;
   margin-top: 65px;
   position: fixed;
-  width: 100px;
+  width: 80px;
   height: 100vh;
   background: #ec5353;
 }
@@ -93,13 +95,14 @@ body{
 }
 
 .home img, .trending img, .favorites img, .settings img{
-  width: 40px;
+  width: 30px;
+  align-self: flex-end;
 }
 
 .home p, .trending p, .favorites p, .settings p{
   color: white;
-  margin-top: -5px;
-  font-size: 20px;
+  margin-top: -2px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -129,22 +132,35 @@ body{
   margin-top: 65px;
 }
 
-.movie-section h2{
+.movie-section-second, .movie-section-third{
+  display: grid;
+  grid-template-rows: auto auto;
+  overflow: hidden;
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 0;
+}
+
+.movie-section h2, .movie-section-second h2, .movie-section-third h2{
   margin: 0;
   margin-top: 20px;
 }
 
 .movies-list{
   display: grid;
-  grid-auto-columns: 375px;
+  grid-auto-columns: 350px;
   grid-auto-flow: column;
-  grid-gap: 20px;
+  grid-gap: 40px;
   overflow: auto;
   padding: 10px;
 }
 
 .movie-item{
   position: relative;
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
+  border-radius: 2px;
 }
 
 .movie-img{
@@ -153,7 +169,7 @@ body{
 
 .movie-img img{
   width: 100%;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .movie-overlay{
@@ -165,8 +181,8 @@ body{
   bottom: 0;
   color: white;
   justify-content: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .movie-overlay h4{
