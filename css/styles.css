@@ -40,7 +40,9 @@ body {
 }
 
 .logo h1 {
-  font-size: 30px;
+  color: white;
+  -webkit-text-stroke-color: #fb6a6a;
+  -webkit-text-stroke-width: 1.2px;
 }
 
 .search {
