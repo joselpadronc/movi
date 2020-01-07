@@ -1,53 +1,54 @@
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+.container {
   display: grid;
   grid-template-columns: 80px 1fr;
-  grid-template-areas: "header header"
-                       "navbar content";
+  grid-template-areas:
+    "header header"
+    "navbar content";
 }
 /* AQUI CONMIENZA LOS ESTILOS DEL HEADER */
-.header{
+.header {
   grid-area: header;
   position: fixed;
   z-index: 1;
   width: 100%;
   height: 65px;
-  background: #f2f2f2;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.logo{
+.logo {
   margin-left: 25px;
   justify-self: start;
   display: flex;
   align-items: center;
 }
 
-.logo img{
+.logo img {
   width: 55px;
   height: 55px;
 }
 
-.logo h1{
+.logo h1 {
   font-size: 30px;
 }
 
-.search{
+.search {
   justify-self: center;
   align-items: center;
 }
 
-.search input{
+.search input {
   width: 500px;
   padding: 10px;
   border-radius: 5px;
@@ -55,25 +56,25 @@ body{
   border: 2px solid skyblue;
 }
 
-.login{
+.login {
   justify-self: end;
   align-items: center;
   display: flex;
   margin-right: 30px;
 }
 
-.login-img img{
+.login-img img {
   cursor: pointer;
   padding-left: 8px;
   width: 40px;
 }
 
-.arrow-icon img{
+.arrow-icon img {
   cursor: pointer;
   width: 40px;
 }
 /* AQUI CONMIENZA LOS ESTILOS DEL NAVBAR */
-.navbar{
+.navbar {
   grid-area: navbar;
   margin-top: 65px;
   position: fixed;
@@ -82,47 +83,57 @@ body{
   background: #ec5353;
 }
 
-.home{
+.home {
   cursor: pointer;
   margin-top: 15px;
   text-align: center;
 }
 
-.trending, .favorites{
+.trending,
+.favorites {
   cursor: pointer;
   margin-top: 40px;
   text-align: center;
 }
 
-.home img, .trending img, .favorites img, .settings img{
+.home img,
+.trending img,
+.favorites img,
+.settings img {
   width: 30px;
   align-self: flex-end;
 }
 
-.home p, .trending p, .favorites p, .settings p{
+.home p,
+.trending p,
+.favorites p,
+.settings p {
   color: white;
   margin-top: -2px;
   font-size: 16px;
   font-weight: 600;
 }
 
-.home a, .trending a, .favorites a, .settings a{
+.home a,
+.trending a,
+.favorites a,
+.settings a {
   text-decoration: none;
 }
 
-.settings{
+.settings {
   cursor: pointer;
   margin-top: 255px;
   text-align: center;
 }
 
 /* AQUI CONMIENZA LOS ESTILOS DE LA MOVIE LIST */
-.movie-contegory{
+.movie-contegory {
   grid-area: content;
   padding: 0 40px 40px 40px;
 }
 
-.movie-section{
+.movie-section {
   display: grid;
   grid-template-rows: auto auto;
   overflow: hidden;
@@ -132,7 +143,8 @@ body{
   margin-top: 65px;
 }
 
-.movie-section-second, .movie-section-third{
+.movie-section-second,
+.movie-section-third {
   display: grid;
   grid-template-rows: auto auto;
   overflow: hidden;
@@ -141,12 +153,14 @@ body{
   margin: 0;
 }
 
-.movie-section h2, .movie-section-second h2, .movie-section-third h2{
+.movie-section h2,
+.movie-section-second h2,
+.movie-section-third h2 {
   margin: 0;
   margin-top: 20px;
 }
 
-.movies-list{
+.movies-list {
   display: grid;
   grid-auto-columns: 350px;
   grid-auto-flow: column;
@@ -155,24 +169,24 @@ body{
   padding: 10px;
 }
 
-.movie-item{
+.movie-item {
   position: relative;
-  -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
-  box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 }
 
-.movie-img{
+.movie-img {
   margin: 0;
 }
 
-.movie-img img{
+.movie-img img {
   width: 100%;
   border-radius: 2px;
 }
 
-.movie-overlay{
+.movie-overlay {
   background: rgba(236, 83, 83, 0.8);
   position: absolute;
   left: 0;
@@ -185,13 +199,173 @@ body{
   border-bottom-right-radius: 2px;
 }
 
-.movie-overlay h4{
+.movie-overlay h4 {
   margin: 0;
   padding: 10px;
 }
 
-.movie-overlay p{
+.movie-overlay p {
   margin: 0;
   padding: 0 8px 8px 8px;
   font-size: 14px;
+}
+
+@media screen and (max-width: 955px) {
+  .header {
+    max-height: 35px;
+  }
+
+  .logo {
+    margin-left: 25px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .search input {
+    width: 100%;
+    height: 0;
+  }
+
+  .login {
+    margin-right: 25px;
+  }
+
+  .login h4 {
+    font-size: 14px;
+  }
+
+  .login-img img {
+    width: 25px;
+  }
+
+  .arrow-icon img {
+    cursor: pointer;
+    width: 20px;
+  }
+
+  .navbar {
+    margin-top: 36px;
+    max-width: 65px;
+  }
+
+  .home img,
+  .trending img,
+  .favorites img,
+  .settings img {
+    width: 20px;
+    align-self: flex-end;
+  }
+
+  .home p,
+  .trending p,
+  .favorites p,
+  .settings p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .container {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+  }
+
+  .logo {
+    margin-left: 16px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .login h4 {
+    display: none;
+  }
+
+  .search input {
+    margin-left: 10px;
+    align-content: center;
+    width: 80%;
+  }
+  .movie-contegory {
+    padding: 0 32px 0 20px;
+  }
+
+  .movie-section {
+    margin-top: 35px;
+  }
+
+  .movies-list {
+    display: grid;
+    grid-auto-columns: 315px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .login {
+    margin-right: 10px;
+  }
+
+  .navbar {
+    max-width: 50px;
+  }
+
+  .home p,
+  .trending p,
+  .favorites p,
+  .settings p {
+    font-size: 10.5px;
+  }
+
+  .movie-contegory {
+    padding: 0 18px 0;
+  }
+
+  .movie-section h2,
+  .movie-section-second h2,
+  .movie-section-third h2 {
+    font-size: 20px;
+  }
+
+  .movies-list {
+    display: grid;
+    grid-auto-columns: 188px;
+    grid-gap: 10px;
+  }
+
+  .movie-overlay {
+    top: 40px;
+    bottom: 0;
+  }
+
+  .movie-overlay h4 {
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  .movie-overlay p {
+    padding: 0 2px 2px 2px;
+    font-size: 10.5px;
+  }
 }
